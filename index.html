@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GreenBuild Constructors — Modern Construction & Renovation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
-    integrity="sha512-1rGE6E9wQnM/1tH0k9h7qZ+gZf8HqV3Qng9uL7QZrF5S2bQ1d4uXlTHo1hXhUQm5g1cGQO9nmiF8oUeG3f1QhQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" integrity="sha512-1rGE6E9wQnM/1tH0k9h7qZ+gZf8HqV3Qng9uL7QZrF5S2bQ1d4uXlTHo1hXhUQm5g1cGQO9nmiF8oUeG3f1QhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --color-primary: #3d5f44;
@@ -34,8 +28,7 @@
       box-sizing: border-box;
     }
 
-    html,
-    body {
+    html, body {
       height: 100%;
     }
 
@@ -53,7 +46,13 @@
       width: 100%;
       max-width: var(--container);
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
     }
 
     header.site-header {
@@ -87,6 +86,13 @@
       font-size: 20px;
     }
 
+    @media (max-width: 480px) {
+      .brand {
+        font-size: 18px;
+        gap: 8px;
+      }
+    }
+
     .brand .logo {
       display: grid;
       place-items: center;
@@ -97,6 +103,14 @@
       color: #fff;
     }
 
+    @media (max-width: 480px) {
+      .brand .logo {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+      }
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -104,6 +118,12 @@
       margin: 0;
       padding: 0;
       align-items: center;
+    }
+
+    @media (max-width: 1200px) {
+      nav ul {
+        gap: 16px;
+      }
     }
 
     nav a {
@@ -149,6 +169,14 @@
       text-decoration: none;
       transition: transform 0.15s ease, box-shadow 0.2s ease;
       box-shadow: 0 10px 20px rgba(253, 123, 70, 0.25);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
     }
 
     .btn:hover {
@@ -166,7 +194,7 @@
       display: none;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       nav ul {
         display: none;
       }
@@ -214,19 +242,14 @@
 
     .hero {
       position: relative;
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(61, 95, 68, 0.18), transparent 60%),
-        radial-gradient(800px 400px at 90% 0%, rgba(253, 123, 70, 0.18), transparent 60%),
-        linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(61, 95, 68, 0.18), transparent 60%), radial-gradient(800px 400px at 90% 0%, rgba(253, 123, 70, 0.18), transparent 60%), linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
       overflow: hidden;
     }
 
     .abstract-pattern {
       position: absolute;
       inset: 0;
-      background-image:
-        radial-gradient(1px 1px at 20% 30%, rgba(61, 95, 68, 0.18) 1px, transparent 1px),
-        radial-gradient(1px 1px at 60% 70%, rgba(61, 95, 68, 0.15) 1px, transparent 1px),
-        radial-gradient(1px 1px at 80% 20%, rgba(253, 123, 70, 0.18) 1px, transparent 1px);
+      background-image: radial-gradient(1px 1px at 20% 30%, rgba(61, 95, 68, 0.18) 1px, transparent 1px), radial-gradient(1px 1px at 60% 70%, rgba(61, 95, 68, 0.15) 1px, transparent 1px), radial-gradient(1px 1px at 80% 20%, rgba(253, 123, 70, 0.18) 1px, transparent 1px);
       background-size: 40px 40px, 50px 50px, 60px 60px;
       opacity: 0.5;
       pointer-events: none;
@@ -236,6 +259,12 @@
       padding: 90px 0 30px;
     }
 
+    @media (max-width: 768px) {
+      .hero-inner {
+        padding: 60px 0 30px;
+      }
+    }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -243,9 +272,16 @@
       align-items: center;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .hero-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
         gap: 30px;
       }
     }
@@ -262,16 +298,23 @@
       font-size: 14px;
     }
 
+    @media (max-width: 480px) {
+      .badge {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+    }
+
     .hero h1 {
       margin: 16px 0 14px;
-      font-size: clamp(32px, 5vw, 54px);
+      font-size: clamp(28px, 5vw, 54px);
       line-height: 1.1;
       letter-spacing: -0.02em;
     }
 
     .hero p.lead {
       color: var(--text-muted);
-      font-size: 18px;
+      font-size: clamp(16px, 3vw, 18px);
     }
 
     .hero .cta-group {
@@ -279,6 +322,21 @@
       gap: 14px;
       flex-wrap: wrap;
       margin-top: 22px;
+      justify-content: center;
+    }
+
+    @media (min-width: 1025px) {
+      .hero .cta-group {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero .cta-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
     }
 
     .hero-visual {
@@ -310,6 +368,24 @@
       font-weight: 600;
     }
 
+    @media (max-width: 600px) {
+      .hero-stats {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats {
+        position: static;
+        margin-top: 16px;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
     .curve-divider {
       display: block;
       line-height: 0;
@@ -321,21 +397,46 @@
       height: 48px;
     }
 
+    @media (max-width: 768px) {
+      .curve-divider svg {
+        height: 32px;
+      }
+    }
+
     section {
       padding: 72px 0;
       position: relative;
     }
 
+    @media (max-width: 768px) {
+      section {
+        padding: 50px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 40px 0;
+      }
+    }
+
     .section-title {
       text-align: center;
       margin-bottom: 18px;
-      font-size: clamp(26px, 4vw, 38px);
+      font-size: clamp(24px, 4vw, 38px);
     }
 
     .section-subtitle {
       text-align: center;
       color: var(--text-muted);
       margin-bottom: 40px;
+      font-size: clamp(14px, 2.5vw, 16px);
+    }
+
+    @media (max-width: 768px) {
+      .section-subtitle {
+        margin-bottom: 30px;
+      }
     }
 
     .stats {
@@ -348,15 +449,18 @@
       gap: 18px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       .stats-grid {
         grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
       }
     }
 
@@ -368,8 +472,14 @@
       text-align: center;
     }
 
+    @media (max-width: 768px) {
+      .stat {
+        padding: 16px;
+      }
+    }
+
     .stat .num {
-      font-size: 34px;
+      font-size: clamp(28px, 6vw, 34px);
       font-weight: 700;
       color: var(--color-primary);
     }
@@ -377,6 +487,7 @@
     .stat .label {
       color: var(--text-muted);
       font-weight: 500;
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .services-grid {
@@ -385,15 +496,18 @@
       gap: 22px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .services-grid {
         grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
       }
     }
 
@@ -403,6 +517,12 @@
       padding: 22px;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      .service-card {
+        padding: 18px;
+      }
     }
 
     .service-card:hover {
@@ -423,13 +543,23 @@
       font-size: 22px;
     }
 
+    @media (max-width: 768px) {
+      .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+    }
+
     .service-card h3 {
       margin: 6px 0 6px;
+      font-size: clamp(18px, 3vw, 20px);
     }
 
     .service-card p {
       color: var(--text-muted);
       margin: 0 0 12px;
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .about {
@@ -443,9 +573,10 @@
       align-items: center;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .about-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
     }
 
@@ -464,6 +595,14 @@
       z-index: 0;
     }
 
+    @media (max-width: 768px) {
+      .blob {
+        width: 120px;
+        height: 120px;
+        inset: -20px -20px auto auto;
+      }
+    }
+
     .about-media img {
       position: relative;
       z-index: 1;
@@ -479,9 +618,10 @@
       margin-top: 12px;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .about-points {
         grid-template-columns: 1fr;
+        gap: 10px;
       }
     }
 
@@ -496,6 +636,10 @@
       margin-top: 4px;
     }
 
+    .about-point span {
+      font-size: clamp(14px, 2.5vw, 16px);
+    }
+
     .process {
       background: #fff;
     }
@@ -506,15 +650,18 @@
       gap: 18px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       .process-grid {
         grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
       }
     }
 
@@ -523,6 +670,12 @@
       border-radius: 14px;
       box-shadow: var(--shadow);
       padding: 22px;
+    }
+
+    @media (max-width: 768px) {
+      .step {
+        padding: 18px;
+      }
     }
 
     .step .n {
@@ -537,6 +690,14 @@
       margin-bottom: 10px;
     }
 
+    .step h3 {
+      font-size: clamp(18px, 3vw, 20px);
+    }
+
+    .step p {
+      font-size: clamp(14px, 2.5vw, 16px);
+    }
+
     .partners {
       background: linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
     }
@@ -548,15 +709,17 @@
       align-items: center;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .logo-strip {
         grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       .logo-strip {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
     }
 
@@ -572,9 +735,21 @@
       transition: filter 0.2s ease, opacity 0.2s ease;
     }
 
+    @media (max-width: 768px) {
+      .logo {
+        height: 40px;
+      }
+    }
+
     .logo:hover {
       filter: grayscale(0%);
       opacity: 1;
+    }
+
+    .logo img {
+      max-width: 90%;
+      max-height: 70%;
+      object-fit: contain;
     }
 
     .projects {
@@ -587,15 +762,18 @@
       gap: 18px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .projects-grid {
         grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
       }
     }
 
@@ -604,6 +782,7 @@
       border-radius: 14px;
       overflow: hidden;
       box-shadow: var(--shadow);
+      aspect-ratio: 4/3;
     }
 
     .project img {
@@ -632,6 +811,7 @@
       right: 12px;
       color: #fff;
       font-weight: 600;
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .faq {
@@ -652,15 +832,31 @@
       padding: 14px 18px;
     }
 
+    @media (max-width: 768px) {
+      details {
+        padding: 12px 16px;
+      }
+    }
+
     summary {
       cursor: pointer;
       font-weight: 600;
       color: var(--color-primary);
       outline: none;
+      font-size: clamp(16px, 3vw, 18px);
+    }
+
+    details div {
+      margin-top: 10px;
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .testimonials {
       background: #fff;
+    }
+
+    .swiper {
+      padding-bottom: 40px;
     }
 
     .testimonial-card {
@@ -669,6 +865,16 @@
       box-shadow: var(--shadow);
       padding: 22px;
       height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        padding: 18px;
+      }
+    }
+
+    .testimonial-card p {
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .stars {
@@ -689,6 +895,21 @@
       object-fit: cover;
     }
 
+    @media (max-width: 768px) {
+      .client img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .client strong {
+      font-size: clamp(14px, 2.5vw, 16px);
+    }
+
+    .client .muted {
+      font-size: clamp(12px, 2vw, 14px);
+    }
+
     .cta {
       background: linear-gradient(135deg, var(--color-secondary), #ff9a6b);
       color: #1f2937;
@@ -706,6 +927,20 @@
       pointer-events: none;
     }
 
+    .cta h2 {
+      font-size: clamp(28px, 5vw, 36px);
+    }
+
+    .cta .container {
+      padding: 50px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .cta .container {
+        padding: 40px 16px;
+      }
+    }
+
     .contact {
       background: #fff;
     }
@@ -716,9 +951,10 @@
       gap: 24px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
 
@@ -727,8 +963,12 @@
       gap: 6px;
     }
 
-    .field input,
-    .field textarea {
+    .field label {
+      font-size: clamp(14px, 2.5vw, 16px);
+      font-weight: 500;
+    }
+
+    .field input, .field textarea {
       width: 100%;
       padding: 12px 14px;
       border-radius: 10px;
@@ -738,8 +978,14 @@
       font-size: 16px;
     }
 
-    .field input:focus,
-    .field textarea:focus {
+    @media (max-width: 768px) {
+      .field input, .field textarea {
+        padding: 10px 12px;
+        font-size: 16px;
+      }
+    }
+
+    .field input:focus, .field textarea:focus {
       outline: 2px solid rgba(61, 95, 68, 0.25);
       border-color: var(--color-primary);
     }
@@ -753,6 +999,12 @@
       background: #f1f5f9;
     }
 
+    @media (max-width: 1024px) {
+      .map {
+        min-height: 250px;
+      }
+    }
+
     footer {
       background: #0f172a;
       color: #e2e8f0;
@@ -764,27 +1016,45 @@
       gap: 22px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
+    }
+
+    .footer-col h3, .footer-col h4 {
+      font-size: clamp(16px, 3vw, 18px);
+    }
+
+    .footer-col p, .footer-col a {
+      font-size: clamp(14px, 2.5vw, 16px);
     }
 
     .socials {
       display: flex;
       gap: 12px;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
 
     .socials a {
       color: #e2e8f0;
       opacity: 0.85;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .socials a {
+        font-size: 20px;
+      }
     }
 
     .socials a:hover {
@@ -801,6 +1071,14 @@
       color: #fff;
     }
 
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: grid;
+      gap: 8px;
+    }
+
     .muted {
       color: var(--text-muted);
     }
@@ -809,6 +1087,19 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: 1025px) {
+      .chips {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .chips {
+        gap: 6px;
+      }
     }
 
     .chip {
@@ -818,6 +1109,69 @@
       font-weight: 600;
       color: var(--color-primary);
       font-size: 14px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .chip {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 22px;
+      padding-top: 22px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        font-size: 13px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--color-primary);
+      opacity: 0.3;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      .service-card:hover, .project:hover .overlay, .logo:hover {
+        transform: none;
+        filter: none;
+        opacity: 0.9;
+        box-shadow: var(--shadow);
+      }
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        text-align: center;
+      }
+      
+      .section-title, .section-subtitle {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -835,20 +1189,13 @@
           <li><a href="#process">Process</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" class="btn" style="padding:10px 16px"><i class="fa-regular fa-paper-plane"></i>Get
-              Quote</a></li>
+          <li><a href="#contact" class="btn" style="padding:10px 16px"><i class="fa-regular fa-paper-plane"></i>Get Quote</a></li>
         </ul>
       </nav>
       <button class="hamburger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <ul class="container">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      
     </div>
   </header>
   <section class="hero" aria-label="Hero">
@@ -861,8 +1208,7 @@
           </span>
           <h1 data-aos="fade-right" data-aos-delay="80">Building Spaces That Stand The Test of Time</h1>
           <p class="lead" data-aos="fade-right" data-aos-delay="140">
-            We deliver modern construction, renovations, and commercial fit‑outs with craftsmanship, safety, and
-            sustainability at the core.
+            We deliver modern construction, renovations, and commercial fit‑outs with craftsmanship, safety, and sustainability at the core.
           </p>
           <div class="cta-group" data-aos="fade-up" data-aos-delay="220">
             <a href="#contact" class="btn"><i class="fa-solid fa-phone"></i> Request a Free Quote</a>
@@ -875,8 +1221,7 @@
           </div>
         </div>
         <div class="hero-visual" data-aos="zoom-in" aria-label="Hero showcase image">
-          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop"
-            alt="Modern building site with crane and structure" />
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop" alt="Modern building site with crane and structure" />
           <div class="hero-stats">
             <span><i class="fa-solid fa-building"></i> 350+ Projects</span>
             <span><i class="fa-regular fa-face-smile"></i> 4.9/5 Rating</span>
@@ -921,8 +1266,7 @@
   <section id="services" aria-labelledby="services-title">
     <div class="container">
       <h2 class="section-title" id="services-title" data-aos="fade-up">Our Core Services</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">From ground‑up builds to meticulous
-        renovations, we’ve got you covered.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">From ground‑up builds to meticulous renovations, we've got you covered.</p>
       <div class="services-grid">
         <article class="service-card" data-aos="fade-up">
           <div class="service-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
@@ -967,22 +1311,16 @@
       <div class="about-grid">
         <div class="about-media" data-aos="zoom-in">
           <span class="blob" aria-hidden="true"></span>
-          <img src="https://images.unsplash.com/photo-1460500063983-994d4c27756c?q=80&w=1600&auto=format&fit=crop"
-            alt="Team of builders reviewing blueprints on site" />
+          <img src="https://images.unsplash.com/photo-1460500063983-994d4c27756c?q=80&w=1600&auto=format&fit=crop" alt="Team of builders reviewing blueprints on site" />
         </div>
         <div>
           <h2 id="about-title">Why Choose GreenBuild</h2>
-          <p class="muted">We combine experienced project management with modern construction methods. Our teams
-            prioritize safety, client communication, and lasting results.</p>
+          <p class="muted">We combine experienced project management with modern construction methods. Our teams prioritize safety, client communication, and lasting results.</p>
           <div class="about-points">
-            <div class="about-point"><i class="fa-solid fa-shield-halved"></i><span><strong>Licensed & Insured:</strong>
-                Peace of mind from start to finish.</span></div>
-            <div class="about-point"><i class="fa-solid fa-clock"></i><span><strong>On‑Schedule:</strong> Reliable
-                timelines with proactive updates.</span></div>
-            <div class="about-point"><i class="fa-solid fa-leaf"></i><span><strong>Sustainable:</strong> Materials and
-                methods that reduce impact.</span></div>
-            <div class="about-point"><i class="fa-solid fa-handshake"></i><span><strong>Transparent:</strong> Clear
-                scopes, fair pricing, zero surprises.</span></div>
+            <div class="about-point"><i class="fa-solid fa-shield-halved"></i><span><strong>Licensed & Insured:</strong> Peace of mind from start to finish.</span></div>
+            <div class="about-point"><i class="fa-solid fa-clock"></i><span><strong>On‑Schedule:</strong> Reliable timelines with proactive updates.</span></div>
+            <div class="about-point"><i class="fa-solid fa-leaf"></i><span><strong>Sustainable:</strong> Materials and methods that reduce impact.</span></div>
+            <div class="about-point"><i class="fa-solid fa-handshake"></i><span><strong>Transparent:</strong> Clear scopes, fair pricing, zero surprises.</span></div>
           </div>
           <div class="cta-group" style="margin-top:14px">
             <a href="#contact" class="btn"><i class="fa-solid fa-envelope"></i> Talk To An Expert</a>
@@ -1000,8 +1338,7 @@
   <section id="process" class="process" aria-labelledby="process-title">
     <div class="container">
       <h2 class="section-title" id="process-title" data-aos="fade-up">Our Process</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Simple, transparent steps to bring your vision
-        to life.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Simple, transparent steps to bring your vision to life.</p>
       <div class="process-grid">
         <div class="step" data-aos="fade-up">
           <div class="n">1</div>
@@ -1053,49 +1390,35 @@
   <section id="projects" class="projects" aria-labelledby="projects-title">
     <div class="container">
       <h2 class="section-title" id="projects-title" data-aos="fade-up">Selected Projects</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A glimpse into our recent builds and
-        transformations.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A glimpse into our recent builds and transformations.</p>
       <div class="projects-grid">
-        <!-- Each project opens in lightbox -->
-        <a href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=900&auto=format&fit=crop"
-            alt="High‑rise construction project" />
+        <a href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=900&auto=format&fit=crop" alt="High‑rise construction project" />
           <span class="overlay"></span>
           <span class="caption">Downtown High‑Rise</span>
         </a>
-        <a href="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="60">
-          <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=900&auto=format&fit=crop"
-            alt="Modern residential renovation" />
+        <a href="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="60">
+          <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=900&auto=format&fit=crop" alt="Modern residential renovation" />
           <span class="overlay"></span>
           <span class="caption">Modern Renovation</span>
         </a>
-        <a href="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="120">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=900&auto=format&fit=crop"
-            alt="Commercial interior fit-out" />
+        <a href="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="120">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=900&auto=format&fit=crop" alt="Commercial interior fit-out" />
           <span class="overlay"></span>
           <span class="caption">Commercial Fit‑Out</span>
         </a>
-        <a href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop"
-            alt="Sustainable wooden house" />
+        <a href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop" alt="Sustainable wooden house" />
           <span class="overlay"></span>
           <span class="caption">Sustainable Home</span>
         </a>
-        <a href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="60">
-          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=900&auto=format&fit=crop"
-            alt="Bricklaying close-up" />
+        <a href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="60">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=900&auto=format&fit=crop" alt="Bricklaying close-up" />
           <span class="overlay"></span>
           <span class="caption">Masonry Excellence</span>
         </a>
-        <a href="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop"
-          class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="120">
-          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=900&auto=format&fit=crop"
-            alt="Team working on construction site" />
+        <a href="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop" class="project glightbox" data-gallery="projects" data-aos="zoom-in" data-aos-delay="120">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=900&auto=format&fit=crop" alt="Team working on construction site" />
           <span class="overlay"></span>
           <span class="caption">Team In Action</span>
         </a>
@@ -1110,8 +1433,7 @@
   <section id="faq" class="faq" aria-labelledby="faq-title">
     <div class="container">
       <h2 class="section-title" id="faq-title" data-aos="fade-up">Frequently Asked Questions</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Answers to common questions about our
-        services.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Answers to common questions about our services.</p>
       <div class="faq-grid">
         <details data-aos="fade-up">
           <summary>Are you licensed and insured?</summary>
@@ -1119,8 +1441,7 @@
         </details>
         <details data-aos="fade-up">
           <summary>How long does a typical project take?</summary>
-          <div class="muted">Timelines vary by scope. After consultation, we provide a clear schedule with milestones.
-          </div>
+          <div class="muted">Timelines vary by scope. After consultation, we provide a clear schedule with milestones.</div>
         </details>
         <details data-aos="fade-up">
           <summary>Do you offer eco‑friendly options?</summary>
@@ -1128,7 +1449,7 @@
         </details>
         <details data-aos="fade-up">
           <summary>How do we get started?</summary>
-          <div class="muted">Request a free quote, and we’ll schedule a consultation to define scope and budget.</div>
+          <div class="muted">Request a free quote, and we'll schedule a consultation to define scope and budget.</div>
         </details>
       </div>
     </div>
@@ -1141,19 +1462,15 @@
   <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
     <div class="container">
       <h2 class="section-title" id="testimonials-title" data-aos="fade-up">What Clients Say</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We’re proud to be trusted by homeowners and
-        businesses alike.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We're proud to be trusted by homeowners and businesses alike.</p>
 
       <div class="swiper" data-aos="zoom-in">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
-                  class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
               <p>Professional, punctual, and meticulous. Our office fit‑out was seamless and ahead of schedule.</p>
-              <div class="client"><img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop"
-                  alt="Client portrait" />
+              <div class="client"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop" alt="Client portrait" />
                 <div><strong>Sarah Johnson</strong>
                   <div class="muted">Operations, Verdant Labs</div>
                 </div>
@@ -1162,13 +1479,9 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
-                  class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
-                  class="fa-solid fa-star-half-stroke"></i></div>
+              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i></div>
               <p>Great communication and workmanship. The team delivered exactly what we envisioned.</p>
-              <div class="client"><img
-                  src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop"
-                  alt="Client portrait" />
+              <div class="client"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop" alt="Client portrait" />
                 <div><strong>Mark Rivera</strong>
                   <div class="muted">Homeowner</div>
                 </div>
@@ -1177,12 +1490,9 @@
           </div>
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
-                  class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
-              <p>Quality results and a respectful crew. We’ll be using GreenBuild again.</p>
-              <div class="client"><img
-                  src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=300&auto=format&fit=crop"
-                  alt="Client portrait" />
+              <div class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+              <p>Quality results and a respectful crew. We'll be using GreenBuild again.</p>
+              <div class="client"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=300&auto=format&fit=crop" alt="Client portrait" />
                 <div><strong>Priya Nair</strong>
                   <div class="muted">Facilities, Northgate</div>
                 </div>
@@ -1201,15 +1511,12 @@
   </section>
   <section class="cta" aria-labelledby="cta-title">
     <span class="pattern" aria-hidden="true"></span>
-    <div class="container" style="padding: 50px 0;">
+    <div class="container">
       <h2 id="cta-title" data-aos="fade-up">Ready to start your project?</h2>
-      <p class="section-subtitle" style="color:#111827" data-aos="fade-up" data-aos-delay="100">Get a free consultation
-        and a detailed quote within 24 hours.</p>
+      <p class="section-subtitle" style="color:#111827" data-aos="fade-up" data-aos-delay="100">Get a free consultation and a detailed quote within 24 hours.</p>
       <div class="cta-group" style="justify-content:center" data-aos="zoom-in" data-aos-delay="180">
-        <a href="#contact" class="btn" style="background:#fff; box-shadow:none"><i class="fa-solid fa-paper-plane"></i>
-          Request a Quote</a>
-        <a href="tel:+1234567890" class="btn btn-outline" style="border-color:#111827; color:#111827"><i
-            class="fa-solid fa-phone"></i> Call +1 (234) 567‑890</a>
+        <a href="#contact" class="btn" style="background:#fff; box-shadow:none"><i class="fa-solid fa-paper-plane"></i> Request a Quote</a>
+        <a href="tel:+1234567890" class="btn btn-outline" style="border-color:#111827; color:#111827"><i class="fa-solid fa-phone"></i> Call +1 (234) 567‑890</a>
       </div>
     </div>
     <div class="curve-divider" aria-hidden="true">
@@ -1221,25 +1528,17 @@
   <section id="contact" class="contact" aria-labelledby="contact-title">
     <div class="container">
       <h2 class="section-title" id="contact-title" data-aos="fade-up">Contact Us</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tell us about your project and we’ll get back
-        within 24 hours.</p>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tell us about your project and we'll get back within 24 hours.</p>
       <div class="contact-grid">
-        <form data-aos="fade-right"
-          style="background:#fff; padding:20px; border-radius:14px; box-shadow: var(--shadow);">
-          <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text"
-              placeholder="John Doe" required /></div>
-          <div class="field" style="margin-top:10px"><label for="email">Email</label><input id="email" name="email"
-              type="email" placeholder="you@example.com" required /></div>
-          <div class="field" style="margin-top:10px"><label for="phone">Phone</label><input id="phone" name="phone"
-              type="tel" placeholder="+1 (234) 567‑890" /></div>
-          <div class="field" style="margin-top:10px"><label for="message">Message</label><textarea id="message"
-              name="message" rows="5" placeholder="Tell us about your goals"></textarea></div>
-          <button class="btn" type="submit" style="margin-top:14px"><i class="fa-regular fa-paper-plane"></i> Send
-            Message</button>
+        <form data-aos="fade-right" style="background:#fff; padding:20px; border-radius:14px; box-shadow: var(--shadow);">
+          <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" placeholder="John Doe" required /></div>
+          <div class="field" style="margin-top:10px"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required /></div>
+          <div class="field" style="margin-top:10px"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+1 (234) 567‑890" /></div>
+          <div class="field" style="margin-top:10px"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell us about your goals"></textarea></div>
+          <button class="btn" type="submit" style="margin-top:14px"><i class="fa-regular fa-paper-plane"></i> Send Message</button>
         </form>
         <div class="map" data-aos="fade-left">
-          <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1600&auto=format&fit=crop"
-            alt="City skyline" style="width:100%; height:100%; object-fit: cover; display:block" />
+          <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1600&auto=format&fit=crop" alt="City skyline" style="width:100%; height:100%; object-fit: cover; display:block" />
         </div>
       </div>
     </div>
@@ -1250,7 +1549,7 @@
     </div>
   </section>
   <footer aria-labelledby="footer-title">
-    <div class="container" style="padding: 50px 0;">
+    <div class="container" style="padding: 50px 20px;">
       <div class="footer-grid">
         <div class="footer-col">
           <h3 id="footer-title" style="margin:0 0 10px">GreenBuild</h3>
@@ -1264,7 +1563,7 @@
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
-          <ul style="list-style:none; padding:0; margin:10px 0 0; display:grid; gap:8px;">
+          <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -1273,7 +1572,7 @@
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <ul style="list-style:none; padding:0; margin:10px 0 0; display:grid; gap:8px;">
+          <ul>
             <li><a href="#services">General Contracting</a></li>
             <li><a href="#services">Renovations</a></li>
             <li><a href="#services">Residential Builds</a></li>
@@ -1282,20 +1581,13 @@
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
-          <p class="muted" style="margin:10px 0 6px"><i class="fa-solid fa-location-dot"></i> 123 Builder Ave, Suite 200
-          </p>
-          <p class="muted" style="margin:0 0 6px"><i class="fa-solid fa-phone"></i> <a href="tel:+1234567890"
-              style="color:#cbd5e1; text-decoration:none">+1 (234) 567‑890</a></p>
-          <p class="muted" style="margin:0 0 12px"><i class="fa-solid fa-envelope"></i> <a
-              href="mailto:hello@greenbuild.com" style="color:#cbd5e1; text-decoration:none">hello@greenbuild.com</a>
-          </p>
-          <a href="#top" class="btn"
-            style="padding:10px 16px; background: var(--color-primary); color:#fff; box-shadow:none"><i
-              class="fa-solid fa-arrow-up"></i> Back to top</a>
+          <p class="muted" style="margin:10px 0 6px"><i class="fa-solid fa-location-dot"></i> 123 Builder Ave, Suite 200</p>
+          <p class="muted" style="margin:0 0 6px"><i class="fa-solid fa-phone"></i> <a href="tel:+1234567890" style="color:#cbd5e1; text-decoration:none">+1 (234) 567‑890</a></p>
+          <p class="muted" style="margin:0 0 12px"><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@greenbuild.com" style="color:#cbd5e1; text-decoration:none">hello@greenbuild.com</a></p>
+          <a href="#top" class="btn" style="padding:10px 16px; background: var(--color-primary); color:#fff; box-shadow:none"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
         </div>
       </div>
-      <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:22px 0" />
-      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:14px; color:#94a3b8">
+      <div class="footer-bottom">
         <span>© <span id="year"></span> GreenBuild Constructors. All rights reserved.</span>
         <span>Made with <i class="fa-solid fa-heart" style="color:#fd7b46"></i> for quality builds.</span>
       </div>
@@ -1303,9 +1595,7 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/glightbox.min.js"
-    integrity="sha512-0Vjzr8M1xXrJqrHg8Y4OZfM6Kf0FVm0k4Q+q8q+geYt0mGQmGQ5uqu8R9x8l7jCBY6aN8sS0QmQf+1V1K6I4zQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/glightbox.min.js" integrity="sha512-0Vjzr8M1xXrJqrHg8Y4OZfM6Kf0FVm0k4Q+q8q+geYt0mGQmGQ5uqu8R9x8l7jCBY6aN8sS0QmQf+1V1K6I4zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const header = document.querySelector('header.site-header');
@@ -1315,7 +1605,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     burger.addEventListener('click', () => { const open = mobileMenu.classList.toggle('open'); burger.setAttribute('aria-expanded', String(open)); });
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
-    const mq = window.matchMedia('(min-width: 901px)'); mq.addEventListener('change', () => { if (mq.matches) { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); } });
+    const mq = window.matchMedia('(min-width: 1025px)'); mq.addEventListener('change', () => { if (mq.matches) { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); } });
     AOS.init({ duration: 700, once: true, offset: 100, easing: 'ease-out-quart' });
     const swiper = new Swiper('.swiper', { spaceBetween: 18, pagination: { el: '.swiper-pagination', clickable: true }, autoplay: { delay: 3500, disableOnInteraction: false }, breakpoints: { 0: { slidesPerView: 1 }, 900: { slidesPerView: 2 } } });
     const lightbox = GLightbox({ selector: '.glightbox' });
@@ -1339,5 +1629,4 @@
     sections.forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
   </script>
 </body>
-
 </html>
